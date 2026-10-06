@@ -7,10 +7,14 @@ sobra: desvia, empurra, mata quem declarou ou usa o terreno. Leve a **Carga** da
 - **Baixar para o Lupinho:** [`pressagio.lupi`](https://github.com/willmedeiroz/pressagio-lupi/raw/main/pressagio.lupi), depois
   `lupinho pressagio.lupi`
 
-**Novidades da 0.3:** níveis, habilidades e armas. Cada batalha vencida dá experiência; cada nível vale um ponto para aprender uma
-habilidade (passiva ou ativa), e na preparação (EQUIPE) você escolhe arma e habilidades de cada herói. Ao entregar a Carga ao rei, cada
-herói ganha uma arma nova, com cor, brilho e partículas próprias, e uma habilidade nova. O Místico ganhou quatro magias novas, com efeitos
-que mudam de cor conforme a katana equipada.
+**Novidades da 0.4:** a ameaça cresce com o grupo. Quanto mais experientes os heróis, mais reforços aparecem nas batalhas, e alguns
+inimigos chegam equipados: quem usa ELMO fica sobre um círculo de invocação violeta. Ao entregar a Carga ao rei, cada herói escolhe entre
+uma arma nova e o seu elmo: o Guerreiro ganha um elmo dourado com penacho carmesim e uma aura de fogo, e o Místico, um chapéu negro com
+brilho arcano e um círculo de runas aos pés.
+
+**Na 0.3:** níveis, habilidades e armas. Cada batalha vencida dá experiência; cada nível vale um ponto para aprender uma habilidade
+(passiva ou ativa), e na preparação (EQUIPE) você escolhe arma, elmo e habilidades de cada herói. O Místico ganhou quatro magias, com
+efeitos que mudam de cor conforme a katana equipada.
 
 | Lupi | Teclado (Lupinho) | |
 |---|---|---|
