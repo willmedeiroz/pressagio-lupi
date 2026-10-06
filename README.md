@@ -7,6 +7,11 @@ sobra: desvia, empurra, mata quem declarou ou usa o terreno. Leve a **Carga** da
 - **Baixar para o Lupinho:** [`pressagio.lupi`](https://github.com/willmedeiroz/pressagio-lupi/raw/main/pressagio.lupi), depois
   `lupinho pressagio.lupi`
 
+**Novidades da 0.3:** níveis, habilidades e armas. Cada batalha vencida dá experiência; cada nível vale um ponto para aprender uma
+habilidade (passiva ou ativa), e na preparação (EQUIPE) você escolhe arma e habilidades de cada herói. Ao entregar a Carga ao rei, cada
+herói ganha uma arma nova, com cor, brilho e partículas próprias, e uma habilidade nova. O Místico ganhou quatro magias novas, com efeitos
+que mudam de cor conforme a katana equipada.
+
 | Lupi | Teclado (Lupinho) | |
 |---|---|---|
 | D-pad | W A S D | cursor e navegação |
