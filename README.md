@@ -7,7 +7,12 @@ sobra: desvia, empurra, mata quem declarou ou usa o terreno. Leve a **Carga** da
 - **Baixar para o Lupinho:** [`pressagio.lupi`](https://github.com/willmedeiroz/pressagio-lupi/raw/main/pressagio.lupi), depois
   `lupinho pressagio.lupi`
 
-**Novidades da 0.4:** a ameaça cresce com o grupo. Quanto mais experientes os heróis, mais reforços aparecem nas batalhas, e alguns
+**Novidades da 0.5:** um terceiro herói. Entregue a Carga uma vez e **Hawkeye**, o arqueiro, se junta ao grupo: a flecha dele acerta o
+primeiro corpo numa linha reta e empurra o alvo, e as técnicas trazem a flecha de impacto, a perfurante e a chuva de flechas. Na preparação
+você escolhe quais dois heróis partem. Ele tem arcos próprios (longo, de osso e élfico) e um capuz de falcão com aura de vento. Ao escolher
+quem atacar, inimigos e aliados agora aparecem em cores diferentes, com uma mira no alvo e um aviso quando é um aliado.
+
+**Na 0.4:** a ameaça cresce com o grupo. Quanto mais experientes os heróis, mais reforços aparecem nas batalhas, e alguns
 inimigos chegam equipados: quem usa ELMO fica sobre um círculo de invocação violeta. Ao entregar a Carga ao rei, cada herói escolhe entre
 uma arma nova e o seu elmo: o Guerreiro ganha um elmo dourado com penacho carmesim e uma aura de fogo, e o Místico, um chapéu negro com
 brilho arcano e um círculo de runas aos pés.
