@@ -7,7 +7,17 @@ sobra: desvia, empurra, mata quem declarou ou usa o terreno. Leve a **Carga** da
 - **Baixar para o Lupinho:** [`pressagio.lupi`](https://github.com/willmedeiroz/pressagio-lupi/raw/main/pressagio.lupi), depois
   `lupinho pressagio.lupi`
 
-**Novidades da 0.5:** um terceiro herói. Entregue a Carga uma vez e **Hawkeye**, o arqueiro, se junta ao grupo: a flecha dele acerta o
+**Novidades da 0.6:** um **TUTORIAL** no menu inicial. É uma batalha curta que ensina a ler as marcas dos inimigos, com uma dica por
+turno na barra de baixo, e não mexe na jornada salva. Chegaram também os **itens**, comprados com ouro no **acampamento** entre os
+trechos (2 de ouro cada, até 2 na mochila):
+- a **POÇÃO** cura 3 de vida;
+- o **REMENDO** devolve um quadro à Carga;
+- o **SELO** atrasa o ataque anunciado de um inimigo, que perde o próximo turno.
+
+Usar um item gasta a ação do herói. O favor do rei agora melhora os presentes da entrega: com favor, cada herói escolhe a habilidade
+nova, e com favor 2 leva a arma e o elmo.
+
+**Na 0.5:** um terceiro herói. Entregue a Carga uma vez e **Hawkeye**, o arqueiro, se junta ao grupo: a flecha dele acerta o
 primeiro corpo numa linha reta e empurra o alvo, e as técnicas trazem a flecha de impacto, a perfurante e a chuva de flechas. Na preparação
 você escolhe quais dois heróis partem. Ele tem arcos próprios (longo, de osso e élfico) e um capuz de falcão com aura de vento. Ao escolher
 quem atacar, inimigos e aliados agora aparecem em cores diferentes, com uma mira no alvo e um aviso quando é um aliado.
