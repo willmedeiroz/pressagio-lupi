@@ -7,6 +7,8 @@ sobra: desvia, empurra, mata quem declarou ou usa o terreno. Leve a **Carga** da
 - **Baixar para o Lupinho:** [`pressagio.lupi`](https://github.com/willmedeiroz/pressagio-lupi/raw/main/pressagio.lupi), depois
   `lupinho pressagio.lupi`
 
+**0.7.1:** corrige o botão SEGUIR VIAGEM, que sumia na tela de recompensa da primeira jornada.
+
 **Novidades da 0.7:** a interface do combate foi refeita. O menu de comandos tem painéis escuros com cantos de bronze, palavras
 com acento e ícones próprios para os itens. Um cartão no canto mostra a unidade sob o cursor: retrato, vida em blocos, ataque, movimento e
 estado. Ao lado fica um painel da Carga. A flecha do arqueiro e a investida ganharam marcas próprias no chão.
