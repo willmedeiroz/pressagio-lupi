@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presságio</title>
+<style>
+  /* Page for the Lupinho web build on GitHub Pages (tools/publish.sh copies it as index.html; the build's own game.html is raylib's
+     fixed 480x270 shell). The canvas keeps its 480x270 drawing buffer and is scaled here, in a stylesheet rule: emscripten clears
+     any width/height set inline on the canvas when the game starts, but it does not touch stylesheet rules or these variables. */
+  html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+  #stage { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; }
+  canvas.emscripten {
+    width: var(--w, 480px) !important; height: var(--h, 270px) !important;
+    image-rendering: pixelated; image-rendering: crisp-edges;
+    border: 0; outline: none; background: #000;
+  }
+  #bar { position: fixed; right: 12px; bottom: 12px; display: flex; gap: 6px; transition: opacity .3s;
+         opacity: 0; pointer-events: none; }   /* the buttons sit over the game's HUD, so they only show while the mouse moves */
+  #bar.on { opacity: .8; pointer-events: auto; }
+  #bar button {
+    padding: 6px 12px; font: 13px/1.2 system-ui, sans-serif; color: #d8c9a3; background: rgba(20, 16, 28, .8);
+    border: 1px solid #5a4b6e; border-radius: 4px; cursor: pointer;
+  }
+  #bar button:hover, #bar button:focus-visible { background: rgba(40, 32, 56, .95); }
+  :fullscreen #fs { display: none; }
+</style>
+</head>
+<body>
+<div id="stage"><canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" tabindex="-1"></canvas></div>
+<div id="bar">
+  <button id="mode" type="button" title="Escala inteira (pixels nítidos) ou preencher a tela"></button>
+  <button id="fs" type="button" title="Tela cheia (Esc para sair)">Tela cheia</button>
+</div>
+<script>
+  var W = 480, H = 270;
+  var canvas = document.getElementById('canvas');
+  var mode = 'pixel';                       // 'pixel': whole-number scale in device pixels; 'fill': the largest scale that fits
+  try { mode = localStorage.getItem('pressagio.scale') || 'pixel'; } catch (e) {}
+  // Pixel perfect means every game pixel covers the same number of SCREEN pixels: the scale is a whole number in device pixels
+  // (devicePixelRatio: a laptop at 125% or 150% has more screen pixels than CSS pixels), with black borders around what is left.
+  function fit() {
+    var dpr = window.devicePixelRatio || 1;
+    var aw = window.innerWidth * dpr, ah = window.innerHeight * dpr;
+    var exact = Math.min(aw / W, ah / H);
+    var s = (mode === 'pixel' && exact >= 1) ? Math.floor(exact) : exact;
+    document.documentElement.style.setProperty('--w', (W * s / dpr) + 'px');
+    document.documentElement.style.setProperty('--h', (H * s / dpr) + 'px');
+    document.getElementById('mode').textContent = (mode === 'pixel') ? 'Preencher tela' : 'Pixel perfect';
+  }
+  window.addEventListener('resize', fit);
+  document.addEventListener('fullscreenchange', fit);
+  if (window.matchMedia) {                  // the zoom / devicePixelRatio can change without a resize event
+    (function watch() { var q = matchMedia('(resolution: ' + (window.devicePixelRatio || 1) + 'dppx)');
+      if (q.addEventListener) q.addEventListener('change', function () { fit(); watch(); }, { once: true }); })();
+  }
+  fit();
+  document.getElementById('mode').addEventListener('click', function () {
+    mode = (mode === 'pixel') ? 'fill' : 'pixel';
+    try { localStorage.setItem('pressagio.scale', mode); } catch (e) {}
+    fit(); this.blur(); canvas.focus();
+  });
+  document.getElementById('fs').addEventListener('click', function () {
+    if (document.fullscreenElement) document.exitFullscreen();
+    else if (document.documentElement.requestFullscreen) document.documentElement.requestFullscreen();
+    this.blur(); canvas.focus();   // Enter/Space must not press the button again while playing
+  });
+  var bar = document.getElementById('bar'), idle;
+  function wake() {
+    bar.classList.add('on'); clearTimeout(idle);
+    idle = setTimeout(function () { bar.classList.remove('on'); }, 2500);
+  }
+  document.addEventListener('mousemove', wake);
+  wake();
+  var Module = { canvas: canvas, print: function (t) { console.log(t); } };
+</script>
+<script src="game.js" async></script>
+</body>
+</html>
