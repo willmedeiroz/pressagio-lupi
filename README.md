@@ -7,7 +7,11 @@ sobra: desvia, empurra, mata quem declarou ou usa o terreno. Leve a **Carga** da
 - **Baixar para o Lupinho:** [`pressagio.lupi`](https://github.com/willmedeiroz/pressagio-lupi/raw/main/pressagio.lupi), depois
   `lupinho pressagio.lupi`
 
-**Novidades da 0.6:** um **TUTORIAL** no menu inicial. É uma batalha curta que ensina a ler as marcas dos inimigos, com uma dica por
+**Novidades da 0.7:** a interface do combate foi refeita. O menu de comandos tem painéis escuros com cantos de bronze, palavras
+com acento e ícones próprios para os itens. Um cartão no canto mostra a unidade sob o cursor: retrato, vida em blocos, ataque, movimento e
+estado. Ao lado fica um painel da Carga. A flecha do arqueiro e a investida ganharam marcas próprias no chão.
+
+**Na 0.6:** um **TUTORIAL** no menu inicial. É uma batalha curta que ensina a ler as marcas dos inimigos, com uma dica por
 turno na barra de baixo, e não mexe na jornada salva. Chegaram também os **itens**, comprados com ouro no **acampamento** entre os
 trechos (2 de ouro cada, até 2 na mochila):
 - a **POÇÃO** cura 3 de vida;
